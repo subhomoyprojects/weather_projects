@@ -1,0 +1,218 @@
+.home-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/images/bg.png") no-repeat center center/cover;
+  position: relative;
+  color: #fff;
+  display: flex;
+}
+.home-wrapper::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+.home-wrapper .container {
+  max-width: 90vw;
+  max-height: 90vh;
+  height: 90vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;
+}
+.location-choose {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.bottom-part {
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  min-height: 150px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.bottom-part .item {
+  flex: 1;
+  padding: 15px;
+}
+.bottom-part .item h4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-part .item h4 span {
+  font-size: 3rem;
+}
+.bottom-part .item h4 strong {
+  color: #ffff00;
+  font-weight: 400;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+}
+.bottom-part .item h4 strong::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #ffff00;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+}
+.select-location {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem 3rem;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  width: 100%;
+  max-width: 500px;
+  min-height: 50px;
+}
+.select-location select,
+.select-location input:not([type="submit"]) {
+  width: 100%;
+  height: 50px;
+  padding: 1rem 3rem 1rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+.select-location input:not([type="submit"]) {
+  padding: 1rem;
+  /* text-align: center; */
+  color: #000;
+  text-transform: uppercase;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+.select-location button {
+  border-radius: 0 10px 10px 0;
+}
+.input-holder {
+  display: flex;
+}
+.top-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-left-part h1 i {
+  margin-right: 15px;
+}
+.top-left-part h1 > *:only-child {
+  display: none;
+}
+.top-left-part h1 span {
+  font-weight: 300;
+  font-size: 4rem;
+  margin-left: 5px;
+}
+.top-left-part h1 span::before {
+  content: "(";
+}
+.top-left-part h1 span::after {
+  content: ")";
+}
+.top-right-part h3 {
+  display: flex;
+  align-items: center;
+}
+.top-right-part h3 sup {
+  position: relative;
+  top: -10px;
+}
+.top-right-part h3 i,
+.top-right-part h3 img,
+.top-right-part h3 svg {
+  max-width: 40px;
+  /* filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1); */
+  transform: translate(-50%, -50%) scale(2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.top-right-part h3 > span {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-right: 20px;
+}
+.top-right-part h4 {
+  text-align: right;
+}
+.top-right-part h3 strong {
+  display: inline-flex;
+  align-items: center;
+}
+.error {
+  color: #a40c0c;
+}
+@media (max-width: 560px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .top-part {
+    flex-wrap: wrap;
+  }
+  .top-part > * {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+  .top-part > *:last-child {
+    margin-top: 15px;
+  }
+  .top-left-part h1 span {
+    font-size: 2.4rem;
+  }
+  .top-right-part h3 i,
+  .top-right-part h3 img,
+  .top-right-part h3 svg {
+    margin: 0;
+    text-align: right;
+    display: table;
+    margin-left: auto;
+  }
+  .top-right-part h3 {
+    text-align: right;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  .select-location select,
+  .select-location input:not([type="submit"]) {
+    font-size: 1.5rem;
+  }
+  .bottom-part .item {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}

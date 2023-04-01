@@ -1,0 +1,20 @@
+👉 To manage api we has been used AXIOS
+
+npm i axios
+import axios from 'axios';
+
+
+👉 City through search
+
+https://api.openweathermap.org/data/2.5/weather?q=dubai&appid=73dc731ba55dd7b5076e0c73e65df03a
+
+want to show
+1. humidity
+2. temp
+3. wind speed
+4. Name
+5. Country
+6. Main weather
+7. Descprition
+8. Icon
+9. wind deg
